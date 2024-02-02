@@ -1,5 +1,4 @@
 import express, { Application } from "express";
-import bodyParser from "body-parser";
 import path from "path";
 
 import {
