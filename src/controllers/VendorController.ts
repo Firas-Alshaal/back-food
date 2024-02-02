@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 import { EditVendorInput, VendorLoginInput } from "../dto/Vendor.dto";
 import { findVendor } from "./AdminController";
 import {

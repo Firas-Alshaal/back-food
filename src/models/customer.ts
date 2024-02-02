@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
+import { OrderDoc } from "./order";
 
 interface CustomerDoc extends Document {
   email: string;
@@ -13,6 +14,7 @@ interface CustomerDoc extends Document {
   otp_expire: Date;
   lat: string;
   lng: string;
+  orders: [OrderDoc];
 }
 
 const CustomerSchema = new Schema(
@@ -29,6 +31,12 @@ const CustomerSchema = new Schema(
     otp_expire: { type: Date, required: true },
     lat: { type: Number },
     lng: { type: Number },
+    orders: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "order",
+      },
+    ],
   },
   {
     toJSON: {

@@ -49,6 +49,7 @@ export const customerSignup = async (
     verified: false,
     lat: 0,
     lng: 0,
+    orders: [],
   });
 
   if (result) {

@@ -43,6 +43,7 @@ const customerSignup = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
         verified: false,
         lat: 0,
         lng: 0,
+        orders: [],
     });
     if (result) {
         yield (0, notificationUtility_1.onRequestOTP)(otp, phone);

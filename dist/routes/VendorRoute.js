@@ -12,7 +12,7 @@ const router = express_1.default.Router();
 exports.VendorRoute = router;
 const imageStorage = multer_1.default.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "images");
+        cb(null, "src/images");
     },
     filename: function (req, file, cb) {
         cb(null, new Date().toISOString() + "_" + file.originalname);

@@ -15,14 +15,14 @@ const router = express.Router();
 
 const imageStorage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "images");
+    cb(null, "src/images");
   },
   filename: function (req, file, cb) {
     cb(null, new Date().toISOString() + "_" + file.originalname);
   },
 });
 
-const images = multer({ storage: imageStorage }).array("images", 10);
+export const images = multer({ storage: imageStorage }).array("images", 10);
 
 router.post("/login", vendorLogin);
 router.get("/profile", Authenticate, getVendorProfile);
