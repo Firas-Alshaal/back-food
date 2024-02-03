@@ -6,6 +6,7 @@ import {
   ShoppingRoute,
   CustomerRoute,
   OrderRoute,
+  CartRoute,
 } from "../routes/index";
 
 export default async (app: Application) => {
@@ -17,6 +18,7 @@ export default async (app: Application) => {
   app.use("/shopping", ShoppingRoute);
   app.use("/user", CustomerRoute);
   app.use("/order", OrderRoute);
+  app.use("/cart", CartRoute);
 
   return app;
 };
